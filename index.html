@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Neighborhood Map</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="http://www.myiconfinder.com/uploads/iconsets/79a6cc671eb7205ea4903436e08851c4-map.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+  </head>
+  
+  <body>
+    <div id="wrapper">
+      <div id="sidebar-wrapper">
+        <a href="#" id="menu-toggle"> <img src="img/menu-icon.png" alt="Menu" width="40" height="40"></a>
+        <div id="locations">
+          <h3>Filter</h3>
+          <input type="search" class="form-control" data-bind="textInput: query" autocomplete="off" />
+          <h3>Locations</h3>
+          <select data-bind="foreach: filteredLocations, value:selectedItem" size="5" id="location_list">
+            <option data-bind="text: name, click: $parent.onClick"></option>
+          </select>
+
+          <h5 class="error-msg" data-bind="text: errorMsg"></h5>
+            
+          <table data-bind="with: currentLoc">
+            <tr>
+              <td> <h4 data-bind="text: name"> </h4></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="" alt="rating star image" data-bind="attr: {src: ratingImageUrl}">
+                (<span data-bind="text: reviewCount"> </span>) <br>
+                <img src="" alt="location image" data-bind="attr: {src: imageUrl}">
+                <p class="review" data-bind="text: snippet"> </p>
+              </td>
+            </tr>
+            <tr>
+              <td> <img id="yelp-img" src="img/yelp_review_btn_light.png" alt="Yelp Logo"> </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div id = "map">
+      </div>
+    </div>
+
+  <script src="js/oauth-signature-js-master/dist/oauth-signature.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="js/libs/knockout-3.2.0.js"></script>
+  <script src="js/map.js"></script>
+    
+  <script>
+    $.getScript( "https://maps.googleapis.com/maps/api/js?key=AIzaSyBYZhMnrpiM4N1p7GfnJf9vVyQVCjk6mNs&callback=initMap" )
+      .done(function( script, textStatus ) {
+        return
+      })
+      .fail(function( jqxhr, settings, exception ) {
+        window.location = "error.html";
+        return 
+    });
+  </script>
+  <script>
+    $("#menu-toggle").click(function(e){
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+	color: #2d3c49;
+}
+
+table{
+    table-layout: fixed;
+    width: 200px;
+}
+
+th, td {
+    overflow: hidden;
+    width: 200px;
+}
+
+#map { 
+  height: 100%; 
+  width: 100%; 
+  position:absolute; 
+  top: 0; 
+  left: 0; 
+  z-index: 0;
+}
+
+#locations{
+	padding-left: 50px;
+}
+
+#location_list {
+	width:170px; 
+}
+
+.error-msg { color: red; }
+
+.review{
+	font-size: 10px;
+    };
