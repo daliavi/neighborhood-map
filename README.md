@@ -11,5 +11,4 @@ The application uses Google Maps and Yelp APIs, Knockout JavaScript library, JQu
 
 # Setup
 - Download the project
-- Add your Yelp tokens in map.js, getYelpData function
 - Open index.html file. You must have internet connection for the application to work.

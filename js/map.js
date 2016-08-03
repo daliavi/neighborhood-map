@@ -224,10 +224,10 @@ function getYelpData(item){
                     //
                     // Update with your auth tokens.
                     //
-                    consumerKey : "YOUR KEY HERE",
-                    consumerSecret : "YOUR KEY HERE",
-                    accessToken : "YOUR KEY HERE",
-                    accessTokenSecret : "YOUR KEY HERE"
+                    consumerKey : "bT_oGy6VaM-THMcJictS1w",
+                    consumerSecret : "vef4zotFmvEU35yqbJrgy9jR3WY",
+                    accessToken : "cJYaw6hc8akMEXOhEHkiiCVnvvhW37db",
+                    accessTokenSecret : "JYNvGWMLLDloDLMyKQqja8GD2o0"
             };
 
     var yelp_url = 'https://api.yelp.com/v2/business/' + yelpID;
