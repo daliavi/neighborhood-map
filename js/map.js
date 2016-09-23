@@ -104,7 +104,7 @@ var Location = function(map, data){
 	marker = new google.maps.Marker({
 		position: new google.maps.LatLng(data.lat, data.lng),
 		animation: google.maps.Animation.DROP,
-		icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
+		icon: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png'
 	});
 
           
@@ -198,10 +198,10 @@ var ViewModel = function(){
 
 function toggleMarkers(marker){
     for (i=0; i < gmarkers.length; i++){
-            gmarkers[i].setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
+            gmarkers[i].setIcon('https://maps.google.com/mapfiles/ms/icons/red-dot.png');
         }
     if (marker){
-        marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
+        marker.setIcon('https://maps.google.com/mapfiles/ms/icons/green-dot.png');
     }    
     
     };
